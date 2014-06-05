@@ -1,7 +1,7 @@
 MoonDrake.Routers.Router = Backbone.Router.extend({
 	initialize: function (options) {
 		this.pictures = options.pictures;
-		this.$rootel = options.$rootEl;
+		this.$rootEl = options.$rootEl;
 	},
 
 	routes: {
@@ -9,6 +9,15 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 	},
  
 	root: function(){
-		var rootView = new MoonDrake.
+		var rootView = new MoonDrake.Views.Root({
+
+		});
+		this._swapView(rootView);
+	},
+
+	_swapView: function (view) {
+		this._current_view && this._current_view.remove();
+		this._current_view = view;
+		this.$rootEl.html(view.render().$el);
 	}
 });
