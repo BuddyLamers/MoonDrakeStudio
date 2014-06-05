@@ -1,0 +1,10 @@
+colors: purple with black
+
+Main -- picture in background
+about -- modal in corner
+
+
+gallery page (horror)
+gallery page (fashion)
+
+slideable bar (JS) -- uses modal for a popup?
