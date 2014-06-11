@@ -11,3 +11,45 @@
  *= require_self
  *= require_tree .
  */
+
+* {
+  font: inherit;
+  font-family: sans-serif !important;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+
+	}
+
+body {
+	background-image: 'images/card.jpg';
+	
+	}
+
+#backbone-sidebar {
+	float: right;
+	position: relative;
+	display: block;
+	height: 100%;
+	width: 20%;
+}
+
+#backbone-content {
+	float: left;
+	display: block;
+	height: 100%;
+}
+
+
+
+.side-info-popup {
+	/*display: none;*/
+}
+
+.link-list {
+	margin-top: 200px;
+}
+
+

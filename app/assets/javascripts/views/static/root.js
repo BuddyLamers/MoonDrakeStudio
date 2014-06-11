@@ -4,7 +4,7 @@ MoonDrake.Views.Root = Backbone.View.extend({
 
   render: function() {
   	var renderedContent = this.template({
-  		user: this.model
+  		
   	})
   	this.$el.html(renderedContent);
   	return this;

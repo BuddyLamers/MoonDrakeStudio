@@ -5,6 +5,8 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 	},
 
 	routes: {
+		'contact': 'contact',
+		'home': 'root',
 		'': 'root'
 	},
  
@@ -13,6 +15,11 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 
 		});
 		this._swapView(rootView);
+	},
+
+	contact: function(){
+		var contactView = new MoonDrake.Views.Contact({});
+		this._swapView(contactView);
 	},
 
 	_swapView: function (view) {
