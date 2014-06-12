@@ -1,6 +1,18 @@
 MoonDrake.Views.Gallery = Backbone.View.extend({
 
+  initialize: function(){
+    var tag = this.model;
+    this.previousPages = [];
+    this.currentPage = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?client_id=" + "ca710f787fa246c3b08792d5b91e970e";
+    this.nextPage = null;
+  },
+
   template: JST['pictures/gallery'],
+
+  events: {
+    'click .next': '_next',
+    'click .previous': '_previous'
+  },
 
   oldrender: function(){
   	var renderedContent = this.template({});
@@ -9,19 +21,28 @@ MoonDrake.Views.Gallery = Backbone.View.extend({
   },
 
   render: function(){
-  	var photoCount = 10;
-    var tag = this.model;
+  	var photoCount = 9;
   	var that = this;
+    
+   
+  	this._fetchPhotos(this.currentPage);
 
-  	$.ajax({
-  		type: "GET",
-  		dataType: "jsonp",
-  		cache: false,
-  		url: "https://api.instagram.com/v1/tags/" + tag + "/media/recent?client_id=" + "ca710f787fa246c3b08792d5b91e970e",
-  		success: function(response) {
-  			var length = response.data != 'undefined' ? response.data.length : 0;
-  			var limit = photoCount != null && photoCount < length ? photoCount : length;
-  			if(limit > 0) {
+  	return this;
+  },
+
+  _fetchPhotos: function(passedUrl){
+    var photoCount = 9;
+    var that = this;
+
+    $.ajax({
+      type: "GET",
+      dataType: "jsonp",
+      cache: false,
+      url: passedUrl ,
+      success: function(response) {
+        var length = response.data != 'undefined' ? response.data.length : 0;
+        var limit = photoCount != null && photoCount < length ? photoCount : length;
+        if(limit > 0) {
           for(var i = 0; i < limit; i++) {
            that.$el.append($('<img>', {
             class: "instagram-photo",
@@ -29,19 +50,32 @@ MoonDrake.Views.Gallery = Backbone.View.extend({
           }));
          }
        }
+
+       console.log(response.pagination);
+       that.nextPage = response.pagination.next_url;
+       console.log(that.nextPage);
+       that.$el.append(that.template({
+        number: that.previousPages.length
+       }));
      }
    });
-  	return this;
-  }
+  },
 
-//   render: function(){
-  	
-//   		$('#photos').instagram({
-//   hash: 'makeup',
-//   clientId: 'ca710f787fa246c3b08792d5b91e970e',
-//   userId: '1330565085'
-// });
-//   	return this;
-//   }
+  _next: function(){
+    this.$el.empty();
+    this.previousPages.push(this.currentPage);
+    this.currentPage = this.nextPage;
+    this._fetchPhotos(this.nextPage);
+  },
+
+  _previous: function(){
+    if (this.previousPages.length < 1) {
+      return;
+    };
+    this.$el.empty();
+    this.nextPage = this.currentPage;
+    this.currentPage = this.previousPages.pop();
+    this._fetchPhotos(this.currentPage);
+  }
 
 });

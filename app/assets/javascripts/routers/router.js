@@ -28,7 +28,7 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 
 	gallery: function(){
 		var galleryView = new MoonDrake.Views.Gallery({
-			model: 'flowers'
+			model: 'moon'
 		});
 		this._swapView(galleryView);
 	},
@@ -47,6 +47,6 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 	},
 
 	_createGallery: function(tag) {
-		
+
 	}
 });
