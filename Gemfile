@@ -5,6 +5,8 @@ gem 'rails', '4.0.4'
 
 gem 'backbone-on-rails'
 
+gem 'instagramjs-rails'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 

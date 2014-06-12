@@ -16,6 +16,7 @@
 //= require underscore
 //= require backbone
 //= require moon_drake_studio
+//= require jquery.instagram
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

@@ -7,6 +7,10 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 	routes: {
 		'contact': 'contact',
 		'home': 'root',
+		'gallery': 'gallery',
+		'beauty': 'beauty',
+		'monster': 'monster',
+		'sfx': 'sfx',
 		'': 'root'
 	},
  
@@ -22,9 +26,27 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 		this._swapView(contactView);
 	},
 
+	gallery: function(){
+		var galleryView = new MoonDrake.Views.Gallery({
+			model: 'flowers'
+		});
+		this._swapView(galleryView);
+	},
+
+	beauty: function(){
+		var galleryView = new MoonDrake.Views.Gallery({
+			model: 'kitten'
+		});
+		this._swapView(galleryView);
+	},
+
 	_swapView: function (view) {
 		this._current_view && this._current_view.remove();
 		this._current_view = view;
 		this.$rootEl.html(view.render().$el);
+	},
+
+	_createGallery: function(tag) {
+		
 	}
 });
