@@ -33,6 +33,18 @@ button {
   border: 2px outset buttonface;
 }
 
+h1 {
+  margin: 30px;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+}
+
+p {
+  margin: 30px auto;
+  max-width: 600px;
+}
+
 #backbone-sidebar {
 	float: right;
 	position: relative;
@@ -48,11 +60,58 @@ button {
   width: 89%;
 }
 
-
-
-.side-info-popup {
-	/*display: none;*/
+.modal {
+  display: none;
 }
+
+.modal.is-active {
+  display: block;
+}
+
+.modal-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #fff;
+
+  margin-left: -230px;
+  margin-top: -150px;
+
+  padding: 30px;
+  width: 400px;
+  min-height: 200px;
+  z-index: 1000;
+
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.modal-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.modal-x {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal-x:hover {
+  color: #000;
+}
+
 
 .link-list {
 	margin-top: 200px;

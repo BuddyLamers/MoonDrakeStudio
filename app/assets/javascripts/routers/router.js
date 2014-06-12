@@ -2,6 +2,8 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 	initialize: function (options) {
 		this.pictures = options.pictures;
 		this.$rootEl = options.$rootEl;
+		$('body').on("click", ".open-modal", this._openAboutModal);
+		$('body').on("click", ".close-modal", this._closeAboutModal);
 	},
 
 	routes: {
@@ -52,6 +54,14 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 			model: 'sfxmakeup'
 		});
 		this._swapView(galleryView);
+	},
+
+	_openAboutModal: function(){
+		$("#about-modal").addClass("is-active");
+	},
+
+	_closeAboutModal: function() {
+		$("#about-modal").removeClass("is-active");
 	},
 
 	_swapView: function (view) {
