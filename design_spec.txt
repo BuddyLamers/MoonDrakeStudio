@@ -15,3 +15,14 @@ about
 gallery
 contact
 home
+
+
+--
+add shadow on sidebar
+put pagination in middle
+click on things to make them bigger
+add tumblr feed
+make modal 89% opaque
+
+color scheme:
+purple-black gradient background

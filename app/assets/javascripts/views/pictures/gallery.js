@@ -31,7 +31,7 @@ MoonDrake.Views.Gallery = Backbone.View.extend({
   },
 
   _fetchPhotos: function(passedUrl){
-    var photoCount = 9;
+    var photoCount = 8;
     var that = this;
 
     $.ajax({

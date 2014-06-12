@@ -24,8 +24,8 @@
 	}
 
 body {
-	background-image: 'images/card.jpg';
-	
+	/*background-image: 'images/card.jpg';*/
+	background-image: -webkit-linear-gradient(left, #050505 0%, #BC16EF 81%);
 	}
 
 button {
@@ -132,13 +132,15 @@ a {
 .link-list > li {
   padding-top: 5px;
   padding-bottom: 5px\
-  margin: 1px;
+  
 }
 
 .instagram-photo {
-  width: 30%;
-  margin: 3px;
-  border: 0px solid black;
+  width: 24%;
+  margin: 2px;
+  border: 1px solid black;
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.9);
+  border-radius: 10px;
 }
 
 .page-buttons li {
