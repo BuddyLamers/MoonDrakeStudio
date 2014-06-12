@@ -21,11 +21,13 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 
 		});
 		this._swapView(rootView);
+		this._selectLink($('.home-link'))
 	},
 
 	contact: function(){
 		var contactView = new MoonDrake.Views.Contact({});
 		this._swapView(contactView);
+		this._selectLink($('.contact-link'))
 	},
 
 	gallery: function(){
@@ -33,20 +35,24 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 			model: 'moonmoon'
 		});
 		this._swapView(galleryView);
+		this._selectLink($('.gallery-link'))
 	},
 
 	beauty: function(){
 		var galleryView = new MoonDrake.Views.Gallery({
-			model: 'kitten'
+			model: 'moondrakebeauty'
 		});
 		this._swapView(galleryView);
+		this._selectLink($('.beauty-link'))
+
 	},
 
 	monster: function(){
 		var galleryView = new MoonDrake.Views.Gallery({
-			model: 'horror'
+			model: 'moondrakemonster'
 		});
 		this._swapView(galleryView);
+		this._selectLink($('.monster-link'))
 	},
 
 	sfx: function(){
@@ -54,14 +60,24 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 			model: 'sfxmakeup'
 		});
 		this._swapView(galleryView);
+		this._selectLink($('.sfx-link'))
 	},
 
-	_openAboutModal: function(){
+	_openAboutModal: function() {
 		$("#about-modal").addClass("is-active");
 	},
 
 	_closeAboutModal: function() {
 		$("#about-modal").removeClass("is-active");
+	},
+
+	_selectLink: function($link) {
+		this._deselectAllLinks();
+		$link.addClass('selected-link');
+	},
+
+	_deselectAllLinks: function() {
+		$('.selected-link').removeClass('selected-link');
 	},
 
 	_swapView: function (view) {

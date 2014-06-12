@@ -45,6 +45,10 @@ p {
   max-width: 600px;
 }
 
+a {
+  color: black;
+}
+
 #backbone-sidebar {
 	float: right;
 	position: relative;
@@ -58,6 +62,10 @@ p {
 	display: block;
 	height: 100%;
   width: 89%;
+}
+
+.link:hover {
+  cursor: pointer;
 }
 
 .modal {
@@ -112,6 +120,10 @@ p {
   color: #000;
 }
 
+.link {
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.3);
+  margin: 1px;
+}
 
 .link-list {
 	margin-top: 200px;
@@ -119,7 +131,8 @@ p {
 
 .link-list > li {
   padding-top: 5px;
-  padding-bottom: 5px
+  padding-bottom: 5px\
+  margin: 1px;
 }
 
 .instagram-photo {
@@ -128,7 +141,12 @@ p {
   border: 0px solid black;
 }
 
-.page-list li {
-  width: 20px;
+.page-buttons li {
+  width: 60px;
   float: left;
+  margin: 30px;
+}
+
+.selected-link {
+  background: purple;
 }
