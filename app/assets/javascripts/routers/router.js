@@ -28,7 +28,7 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 
 	gallery: function(){
 		var galleryView = new MoonDrake.Views.Gallery({
-			model: 'moon'
+			model: 'moonmoon'
 		});
 		this._swapView(galleryView);
 	},
@@ -36,6 +36,20 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 	beauty: function(){
 		var galleryView = new MoonDrake.Views.Gallery({
 			model: 'kitten'
+		});
+		this._swapView(galleryView);
+	},
+
+	monster: function(){
+		var galleryView = new MoonDrake.Views.Gallery({
+			model: 'horror'
+		});
+		this._swapView(galleryView);
+	},
+
+	sfx: function(){
+		var galleryView = new MoonDrake.Views.Gallery({
+			model: 'sfxmakeup'
 		});
 		this._swapView(galleryView);
 	},
