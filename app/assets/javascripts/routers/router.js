@@ -84,6 +84,8 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 		this._current_view && this._current_view.remove();
 		this._current_view = view;
 		this.$rootEl.html(view.render().$el);
+		var aboutModalView = new MoonDrake.Views.Aboutmodal();
+		this.$rootEl.append(aboutModalView.render().$el);
 	},
 
 	_createGallery: function(tag) {
