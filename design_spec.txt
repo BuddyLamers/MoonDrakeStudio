@@ -20,6 +20,7 @@ home
 --
 add shadow on sidebar
 put pagination in middle
+extend anchor instead of li in sidebar
 click on things to make them bigger
 add tumblr feed
 make modal 89% opaque

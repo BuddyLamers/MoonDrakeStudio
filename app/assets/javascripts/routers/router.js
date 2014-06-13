@@ -4,6 +4,7 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 		this.$rootEl = options.$rootEl;
 		$('body').on("click", ".open-modal", this._openAboutModal);
 		$('body').on("click", ".close-modal", this._closeAboutModal);
+		$('body').on("click", '.instagram-photo', this._modalFullSizePic);
 	},
 
 	routes: {
@@ -78,6 +79,11 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 
 	_deselectAllLinks: function() {
 		$('.selected-link').removeClass('selected-link');
+	},
+
+	_modalFullSizePic: function(event) {
+		var source = event.currentTarget.src;
+		
 	},
 
 	_swapView: function (view) {

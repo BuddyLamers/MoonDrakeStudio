@@ -12,9 +12,12 @@
  *= require_tree .
  */
 
+ @import "fonts";
+ $quito_font: 'Quito';
+
 * {
   font: inherit;
-  font-family: sans-serif !important;
+  font-family: quito_font !important;
   margin: 0;
   padding: 0;
   border: 0;
@@ -83,13 +86,27 @@ a {
   background: #fff;
 
   margin-left: -230px;
-  margin-top: -150px;
+  margin-top: -250px;
 
   padding: 30px;
-  width: 400px;
+  min-width: 400px;
   min-height: 200px;
   z-index: 1000;
 
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.picture-modal-content {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  background: #fff;
+
+  padding: 30px;
+  width: 612px;
+  height: 612px;
+  z-index: 1000;
   box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
   border-radius: 10px;
 }
