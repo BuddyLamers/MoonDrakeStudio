@@ -11,30 +11,62 @@
  *= require_self
  *= require_tree .
  */
-
+/*
  @import "fonts";
- $quito_font: 'Quito';
+ $quito_font: 'Quito';*/
 
 * {
   font: inherit;
-  font-family: quito_font !important;
+  font-family: sans-serif !important;
   margin: 0;
   padding: 0;
   border: 0;
-  list-style: none;
   text-decoration: none;
-
+  list-style: none;
 	}
 
 body {
 	/*background-image: 'images/card.jpg';*/
 	background-image: -webkit-linear-gradient(left, #050505 0%, #BC16EF 81%);
-	}
+	color: #ebdff2;
+  }
 
-button {
+/*button {
   padding: 2px 6px 3px;
   border: 2px outset buttonface;
-}
+}*/
+
+button {
+   border-top: 1px solid #c246ab;
+   background: #093c69;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ba54b3), to(#093c69));
+   background: -webkit-linear-gradient(top, #ba54b3, #093c69);
+   background: -moz-linear-gradient(top, #ba54b3, #093c69);
+   background: -ms-linear-gradient(top, #ba54b3, #093c69);
+   background: -o-linear-gradient(top, #ba54b3, #093c69);
+   padding: 9.5px 19px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ebdff2;
+   font-size: 16px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+button:hover {
+   border-top-color: #823777;
+   background: #823777;
+   color: #ccc;
+   }
+button:active {
+   border-top-color: #f07ac7;
+   background: #f07ac7;
+   }
 
 h1 {
   margin: 30px;
@@ -49,7 +81,13 @@ p {
 }
 
 a {
-  color: black;
+  color: #ebdff2;
+}
+
+.group {
+  clear: both;
+  content: " ";
+  display: block;
 }
 
 #backbone-sidebar {
@@ -58,6 +96,10 @@ a {
 	display: block;
 	height: 100%;
 	width: 11%;
+}
+
+#backbone-sidebar > div {
+  height: 100%;
 }
 
 #backbone-content {
@@ -89,12 +131,13 @@ a {
   margin-top: -250px;
 
   padding: 30px;
-  min-width: 400px;
+  width: 400px;
   min-height: 200px;
   z-index: 1000;
 
   box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
   border-radius: 10px;
+  color: purple;
 }
 
 .picture-modal-content {
@@ -103,9 +146,13 @@ a {
   right: 50%;
   background: #fff;
 
-  padding: 30px;
-  width: 612px;
-  height: 612px;
+  background: black;
+
+  margin-left: -250px;
+  margin-top: -200px;
+
+  /*padding: 30px;*/
+  /*width: 640px;*/
   z-index: 1000;
   box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
   border-radius: 10px;
@@ -138,18 +185,29 @@ a {
 }
 
 .link {
-  box-shadow: 0 0 1px 1px rgba(0,0,0,0.3);
+  
   margin: 1px;
 }
 
 .link-list {
-	margin-top: 200px;
+  margin-top: 150px;
+	/*margin-top: 150px;*/
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+  /*background: #BA47B1;*/
+  background-image: -webkit-linear-gradient(top left, #000000 0%, #E609BD 100%);
+  border-radius: 10px;
 }
 
 .link-list > li {
   padding-top: 5px;
-  padding-bottom: 5px\
-  
+  padding-bottom: 5px;
+  list-style: none;
+}
+
+.link-list a {
+  margin-top: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .instagram-photo {
@@ -160,12 +218,32 @@ a {
   border-radius: 10px;
 }
 
-.page-buttons li {
-  width: 60px;
-  float: left;
-  margin: 30px;
+.instagram-photo-fullsize {
+  border-radius: 10px;
+  position: absolute;
+  display: block;
 }
+
+.page-buttons {
+  margin-left: 15%;
+}
+
+.page-buttons li {
+  width: 20%;
+  float: left;
+  margin: 5%;
+  list-style: none;
+}
+
+
 
 .selected-link {
   background: purple;
+  border-radius: 5px;
+}
+
+.selected-link > a {
+  color: black;
+  font-weight: bolder;
+  /*text-shadow: rgba(0,0,0,.4) 0 1px 0;*/
 }

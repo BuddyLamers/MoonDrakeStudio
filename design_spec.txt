@@ -22,8 +22,22 @@ add shadow on sidebar
 put pagination in middle
 extend anchor instead of li in sidebar
 click on things to make them bigger
-add tumblr feed
 make modal 89% opaque
+about MoonDrake Studio
+mouseover pic: pink shadow
+Background main page stretch to window size
+scoot down gallery view
+center contact view
+calendar
+email stephanie
+add tumblr feed
 
 color scheme:
 purple-black gradient background
+text color: white (when on purple)
+modal text: purple
+sidebar bg color: pinky-purple
+sidebar selected color: light blue
+no mouseover on sidebar
+
+

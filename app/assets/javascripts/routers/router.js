@@ -3,7 +3,7 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 		this.pictures = options.pictures;
 		this.$rootEl = options.$rootEl;
 		$('body').on("click", ".open-modal", this._openAboutModal);
-		$('body').on("click", ".close-modal", this._closeAboutModal);
+		$('body').on("click", ".close-modal", this._closeAllModals);
 		$('body').on("click", '.instagram-photo', this._modalFullSizePic);
 	},
 
@@ -68,8 +68,8 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 		$("#about-modal").addClass("is-active");
 	},
 
-	_closeAboutModal: function() {
-		$("#about-modal").removeClass("is-active");
+	_closeAllModals: function() {
+		$(".modal").removeClass("is-active");
 	},
 
 	_selectLink: function($link) {
@@ -82,8 +82,12 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 	},
 
 	_modalFullSizePic: function(event) {
+		// console.log(MoonDrake);
 		var source = event.currentTarget.src;
-		
+		var modalView = new MoonDrake.Views.Fullsize({
+			model: source
+		});
+		$("#backbone-content").append(modalView.render().$el);
 	},
 
 	_swapView: function (view) {
