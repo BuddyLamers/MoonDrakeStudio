@@ -17,7 +17,7 @@
 
 * {
   font: inherit;
-  font-family: sans-serif !important;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
   border: 0;
@@ -73,6 +73,9 @@ h1 {
   font-weight: bold;
   font-size: 60px;
   text-align: center;
+  font-family: 'Quito' !important;
+  /*z-index: 50;*/
+  display: block;
 }
 
 p {
@@ -142,19 +145,19 @@ a {
 
 .picture-modal-content {
   position: absolute;
+  top: 50%;
   left: 50%;
-  right: 50%;
   background: #fff;
 
   background: black;
 
-  margin-left: -250px;
-  margin-top: -200px;
+  margin-left: -270px;
+  margin-top: -300px;
 
   /*padding: 30px;*/
-  /*width: 640px;*/
+  width: 640px;
   z-index: 1000;
-  box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
+  /*box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);*/
   border-radius: 10px;
 }
 
@@ -219,9 +222,11 @@ a {
 }
 
 .instagram-photo-fullsize {
-  border-radius: 10px;
+  border-radius: 50px;
   position: absolute;
   display: block;
+  width: 640px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
 }
 
 .page-buttons {
@@ -246,4 +251,10 @@ a {
   color: black;
   font-weight: bolder;
   /*text-shadow: rgba(0,0,0,.4) 0 1px 0;*/
+}
+
+.main > img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }

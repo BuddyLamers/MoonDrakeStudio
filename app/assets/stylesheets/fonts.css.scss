@@ -1,6 +1,10 @@
-@font-face{
-    font-family: 'Quito';
-    src: font-url("Quito_Colonial_LT_Medium.ttf") unquote("format('opentype')");
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: 'Quito';
+  src:font-url('quito.ttf');
+  src:font-url('quito.ttf?#iefix') format('embedded-opentype'),
+    font-url('quito.svg#quito') format('svg'),
+    font-url('quito.woff') format('woff'),
+    fonnt-url('quito.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
