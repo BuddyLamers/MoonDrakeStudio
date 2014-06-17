@@ -22,13 +22,12 @@ add shadow on sidebar -done
 put pagination in middle -done
 extend anchor instead of li in sidebar -done
 click on things to make them bigger -done
-
 about MoonDrake Studio -done
-mouseover pic: pink shadow
+mouseover pic: pink shadow -done
 Background main page stretch to window size
-scoot down gallery view
-center contact view
-calendar
+scoot down gallery view -nevermind
+center contact view -done
+calendar -done
 email stephanie
 add tumblr feed
 make modal 89% opaque
