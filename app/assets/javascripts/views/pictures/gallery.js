@@ -62,6 +62,10 @@ MoonDrake.Views.Gallery = Backbone.View.extend({
   },
 
   _next: function(){
+    console.log(this.nextPage);
+    if (this.nextPage === undefined) {
+      return;
+    };
     this.$el.empty();
     this.previousPages.push(this.currentPage);
     this.currentPage = this.nextPage;
