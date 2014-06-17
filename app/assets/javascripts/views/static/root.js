@@ -9,6 +9,7 @@ MoonDrake.Views.Root = Backbone.View.extend({
   		
   	})
   	this.$el.html(renderedContent);
+    $('body').addClass("root-main");
 
 
   	return this;

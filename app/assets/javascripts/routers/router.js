@@ -91,6 +91,7 @@ MoonDrake.Routers.Router = Backbone.Router.extend({
 	},
 
 	_swapView: function (view) {
+		$('body').removeClass("root-main");
 		this._current_view && this._current_view.remove();
 		this._current_view = view;
 		this.$rootEl.html(view.render().$el);
